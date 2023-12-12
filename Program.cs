@@ -12,6 +12,14 @@ namespace ConsoleApp8
         {
             try
             {
+
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.CursorVisible = false;
+                Console.Title = "Шеленков Кирилл - практикум 10";
+
+
+                //Задача 1. Дано целое число n, указывающее номер дня недели от 1 до 7. По указанному номеру n вывести название соответствующего дня недели.
+
                 Console.Write("Укажите номер дня недели: ");
                 byte day = byte.Parse(Console.ReadLine());
                 while (day > 7)
@@ -31,14 +39,16 @@ namespace ConsoleApp8
                 }
 
 
-                Console.Write("Укажите номер месяца: ");
-                byte mouth = byte.Parse(Console.ReadLine());
+                //Задача 2. В зависимости от порядкового номера месяца (1, 2, ... , 12) вывести на экран его название (январь, февраль, ... , декабрь).
 
-                while (mouth > 12)
+                Console.Write("Укажите номер месяца: ");
+                byte month = byte.Parse(Console.ReadLine());
+
+                while (month > 12)
                 {
-                    mouth -= 12;
+                    month -= 12;
                 }
-                switch (mouth)
+                switch (month)
                 {
                     case 1: Console.WriteLine("Январь"); break;
                     case 2: Console.WriteLine("Февраль"); break;
@@ -56,6 +66,7 @@ namespace ConsoleApp8
                 }
 
 
+                //Задача 3.По номеру месяца вывести название времени года.
 
                 Console.Write("Укажите номер месяца: ");
                 byte season = byte.Parse(Console.ReadLine());
@@ -74,6 +85,7 @@ namespace ConsoleApp8
                 }
 
 
+                //Задача 4.Вывести название предмета по введенной первой букве: ф – физика, м – математика, и – история, г – география, б – биология.
 
                 Console.Write("Введите первую букву учебного предмета: ");
                 char lessons = char.Parse(Console.ReadLine());
